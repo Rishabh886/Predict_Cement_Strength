@@ -1,7 +1,10 @@
 numpy
-pandas
+pandas==1.3.5
 matplotlib
 xgboost
 sklearn
 seaborn
-Flask
+flask
+xlrd
+ipykernel
+openpyxl

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strength Prediction</title>
+</head>
+<style>
+  body {
+    background: lightblue;
+    min-height: 100vh;
+  }
+
+  .login_content {
+    justify-content: center;
+  }
+
+  .heading_content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .mid {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    margin: 5px;
+    color: rgb(0, 0, 0);
+  }
+
+  .content input {
+    margin: 10px;
+    display: inline-block;
+  }
+
+</style>
+
+<body>
+  <div class="login_content">
+    <h1 class="heading_content">Concrete Compressive Strength</h1>
+    <h4 class="mid">(Input all the values as per the mentioned units)</h4>
+    <div class="content">
+
+      <form action="/predict_api" method="post">
+        <label for="Cement"> <strong>Cement (kg/m3)</strong></label>
+        <input type="text" name="Cement" required="required" /><br>
+        <label for="Blast Furnace Slag"> <strong>Blast Furnace Slag (kg/m3)</strong></label>
+        <input type="text" name="Blast Furnace Slag" required="required" /><br>
+        <label for="Fly Ash"> <strong>Fly Ash (kg/m3)</strong></label>
+        <input type="text" name="Fly Ash" required="required" /><br>
+        <label for="Water"> <strong>Water (kg/m3)</strong></label>
+        <input type="text" name="Water" required="required" /><br>
+        <label for="Superplasticizer"> <strong>Superplasticizer (kg/m3)</strong></label>
+        <input type="text" name="Superplasticizer" required="required" /><br>
+        <label for="Coarse Aggregate"> <strong>Coarse Aggregate (kg/m3)</strong></label>
+        <input type="text" name="Coarse Aggregate" required="required" /><br>
+        <label for="Fine Aggregate"> <strong>Fine Aggregate (kg/m3)</strong></label>
+        <input type="text" name="Fine Aggregate" required="required" /><br>
+        <label for="Age (day)"> <strong>Age (days)</strong></label>
+        <input type="text" name="Age (day)" required="required" /><br>
+
+
+
+
+
+        <div style="text-align:center; margin-top: 25px;">
+          <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        </div>
+
+      </form>
+    </div>
+
+
+    <br>
+    <br>
+
+  <p style="text-align: center; margin-top: 0px;"><strong>{{prediction_text}}</strong>.</p>
+
+
+</body>
+
+</html>
