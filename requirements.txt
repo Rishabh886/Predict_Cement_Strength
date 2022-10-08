@@ -8,3 +8,4 @@ flask
 xlrd
 ipykernel
 openpyxl
+gunicorn
